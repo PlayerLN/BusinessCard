@@ -1,0 +1,41 @@
+*{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  background-color: #222222;
+}
+
+.flip{
+  width: 900px;
+  height: 500px;
+}
+
+.frente{
+  position: absolute;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+  transition: all .4s linear;
+}
+
+.verso{
+  position: absolute;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  transition: all .4s linear;
+}
+
+.flip:hover .frente {
+  transform: rotateY(180deg);
+}
+
+.flip:hover .verso{
+  transform: rotateY(0deg);
+  cursor: pointer;
+}
